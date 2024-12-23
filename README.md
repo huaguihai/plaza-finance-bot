@@ -1,6 +1,6 @@
 # Auto Daily Plaza Finance Bot
 
-注册 : https://testnet.plaza.finance/rewards/a0MndhdkWSCb
+注册 : https://testnet.plaza.finance/rewards/NFWSHAPk8mlx
 
 1、该脚本基于 https://github.com/ganjsmoke/plaza-finance-bot 进行了细微调整，包括：增加钱包生成功能、私钥加密功能、打印信息可阅读性优化，核心交互流程代码没有变更。
 2、实现了自动与Plaza Finance 水龙头进行交互，确保对wstETH代币的无限支出，创建债券和杠杆代币，并赎回部分代币。它以循环方式处理多个钱包，在处理完所有钱包后延迟6小时。
