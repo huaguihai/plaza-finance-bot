@@ -20,8 +20,8 @@
 1. **克隆项目**：
    - 使用以下命令将项目克隆到本地：
    ```bash
-   git clone <项目的Git仓库URL>
-   cd <项目文件夹>
+   git clone https://github.com/huaguihai/plaza-finance-bot
+   cd plaza-finance-bot
    ```
 
 2. **安装所需的Node.js模块**：
