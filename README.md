@@ -41,8 +41,8 @@ Plaza 是一个可编程衍生品平台，构建在 Base 区块链上的一组 S
 
 1. 克隆本仓库：
    ```bash
-   git clone https://github.com/huaguihai/plaza-finance-bot
-   cd plaza-finance-bot
+   git clone https://github.com/huaguihai/PlazaBot
+   cd PlazaBot
    ```
 2. 安装依赖：
    ```bash
