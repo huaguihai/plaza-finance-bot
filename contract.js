@@ -4,7 +4,7 @@ const provider = new ethers.JsonRpcProvider("https://base.llamarpc.com");
 const message = "Sign to prove you own the address";
 const contractAddress = "0x83102E2Dc04CF0d2879C4F5dbD17246Fec2C963a";
 
-// Function to sign the message 
+// 签名消息函数
 export const signMessage = async (privateKey) => {
     const wallet = new ethers.Wallet(privateKey, provider);
     try {
@@ -32,7 +32,7 @@ const abi = [
     }
 ];
 
-// Function to mint 
+// 铸造NFT函数
 export const mintNft = async (privateKey, signature) => {
     const wallet = new ethers.Wallet(privateKey, provider);
     const contract = new ethers.Contract(contractAddress, abi, wallet);

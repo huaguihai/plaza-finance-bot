@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import log from "./logger.js";
 
-// Configuration
+// 配置
 const provider = new ethers.JsonRpcProvider('https://sepolia.base.org');
 const contractAddress = '0x47129e886b44B5b8815e6471FCD7b31515d83242';
 const explorer = 'https://sepolia.basescan.org/tx/'
@@ -14,7 +14,7 @@ const tokens = [
     { address: '0x975f67319f9DA83B403309108d4a8f84031538A6', name: 'levETH' },
 ];
 
-// ERC20 ABI
+// ERC20 ABI 接口
 const erc20ABI = [
     {
         "constant": false,
@@ -36,7 +36,7 @@ const erc20ABI = [
         "stateMutability": "view"
     }
 ];
-// Redeem and Deposit ABI
+// 赎回和存款 ABI 接口
 const redeemABI = [
     {
         inputs: [
@@ -65,7 +65,7 @@ const createABI = [
     },
 ];
 
-// Function to check and approve a token
+// 检查并批准代币的函数
 const approveTokenIfNeeded = async (wallet, tokenAddress, tokenName) => {
     try {
         const tokenContract = new ethers.Contract(tokenAddress, erc20ABI, wallet);
@@ -83,14 +83,14 @@ const approveTokenIfNeeded = async (wallet, tokenAddress, tokenName) => {
     }
 };
 
-// Updated approveAllTokens function
+// 更新后的批准所有代币函数
 const approveAllTokens = async (wallet) => {
     for (const token of tokens) {
         await approveTokenIfNeeded(wallet, token.address, token.name);
     }
 };
 
-// Deposit and Redeem Functions
+// 存款和赎回函数
 const deposit = async (contract, tokenType) => {
     try {
         const tx = await contract.create(tokenType, depositAmount, minAmount);
@@ -114,7 +114,7 @@ const redeem = async (contract, tokenType) => {
     }
 };
 
-// Run Transactions
+// 执行交易
 const runTransactions = async (privateKey, tokenType) => {
     const wallet = new ethers.Wallet(privateKey, provider);
     const contract = new ethers.Contract(contractAddress, [...redeemABI, ...createABI], wallet);

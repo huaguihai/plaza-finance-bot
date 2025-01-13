@@ -1,11 +1,13 @@
 import winston from 'winston';
 
+// 自定义时间戳格式
 const customTimestampFormat = winston.format((info) => {
     const timestamp = new Date().toLocaleString();
     info.timestamp = `\x1b[36m${timestamp}\x1b[0m`;
     return info;
 });
 
+// 日志格式配置
 const logFormat = winston.format.combine(
     customTimestampFormat(),
     winston.format.printf(({ timestamp, level, message }) => {
@@ -17,6 +19,7 @@ const logFormat = winston.format.combine(
     })
 );
 
+// 创建日志记录器
 const logger = winston.createLogger({
     level: 'info',
     format: logFormat,
