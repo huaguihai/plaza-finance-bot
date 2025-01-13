@@ -1,5 +1,5 @@
 # PLAZA 金融机器人
-![PLAZA 金融横幅](image/image-1.png)
+
 Plaza 是一个基于 Base 区块链的链上债券和杠杆平台。
 
 Plaza 是一个可编程衍生品平台，构建在 Base 区块链上的一组 Solidity 智能合约。它提供两个核心产品：bondETH 和 levETH，它们是以 wstETH 等 ETH 流动性质押衍生品（LSTs）和流动性再质押衍生品（LRTs）池为基础的可编程衍生品。用户可以存入 wstETH 等底层资产，并获得 levETH 或 bondETH 作为回报，这些代币以 ERC20 代币形式表示。这些代币可与 DEX、借贷市场、再质押平台等协议组合使用。
@@ -41,7 +41,7 @@ Plaza 是一个可编程衍生品平台，构建在 Base 区块链上的一组 S
 
 1. 克隆本仓库：
    ```bash
-   git clone https://github.com/Zlkcyber/plazafintot.git
+   git clone https://github.com/huaguihai/plaza-finance-bot
    cd plazafintot
    ```
 2. 安装依赖：
